@@ -70,6 +70,12 @@ class BankAccount {
 			cout << name << " , the total balance of your account "<< " is " << getBalance () << endl;
 		}
 };
+// в каждом подклассе можно создать методы с такими же названиями - и соответсвующий метод будет работать для соотв класса в программе.
+// для конструкторов с параметрами - чтобы запросить параметры у юзера - сначала cin, потом вызывать конструктор
+// on GitHub - CIS2013 - bank file
+
+// if sentences can be put as methods to Saving class - with the same name : 
+//withdraw - the Saving class will use its own withdraw method, but variables inherit from the main class.
 
 class Saving : public BankAccount {
 	public:
@@ -89,6 +95,12 @@ class Saving : public BankAccount {
 	// }
 	
 };
+
+// Constructors are inherited: Checking () : BankAccount () {fee == 25}
+
+// if sentences can be put as methods to Checking class - with the name : 
+//overdraft - the Checking class will use its own method, but variables inherit from the main class.
+
 
 class Checking : public BankAccount {
 	public:
@@ -145,6 +157,7 @@ int main () {
 		default : 
 		cout << "Illegal value.";
 		}
+		// if sentences can be put as methods to Saving class - with the same name : withdraw - the Saving class will use its own withdraw method, but variables inherit from the main class.
 	if (new_s.balance < new_s.min_balance) {
 			cout << "Warning!!! Your balance is below minimum! " << endl;
 		}
@@ -198,6 +211,8 @@ int main () {
 			cout << "Illegal value.";
 		}
 		
+		// if sentences can be put as methods to Checking class - with the name : overdraft - the Checking class will use its own method, but variables inherit from the main class.
+
 		if (new_c.balance < 0) {
 			cout << "Warning!!! Your balance is below 0! " << endl;
 			cout << " Your fee is " << new_c.overdraft_fee << endl;
