@@ -67,7 +67,7 @@ class BankAccount {
 			cout << "Balance on your account is " << balance << endl;
 		}
 		void print () {
-			cout << "The total balance of your account is " << getBalance () << endl;
+			cout << name << " , the total balance of your account "<< " is " << getBalance () << endl;
 		}
 };
 
