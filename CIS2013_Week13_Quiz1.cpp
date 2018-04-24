@@ -106,7 +106,8 @@ class Checking : public BankAccount {
 	public:
 	
 	int overdraft_fee=10;
-	
+	int balance = balance - overdraft_fee;
+		
 	
 };
 
@@ -165,6 +166,7 @@ int main () {
 		new_s.balance+=new_s.withd;
 		new_s.withd = 0;
 		cout << "Warning!!! You can't withdraw more than " << new_s.min_balance << " ! " << endl;
+		cout << "Balance on your account is " << new_s.balance << endl;
 	}	
 	
 	cout << "		*****		" << endl; 
