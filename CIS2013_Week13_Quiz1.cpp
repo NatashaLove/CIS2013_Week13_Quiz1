@@ -1,3 +1,8 @@
+// This program is finished in Week13 Homework
+// Homework for week 13, by 04/25/2018 is at:
+// https://github.com/NatashaLove/CIS2013_Week13_Homework1/blob/master/CIS2013_Week13_Homework1.cpp
+
+
 #include <iostream>
 #include <cstring>
 
@@ -122,6 +127,14 @@ int main () {
 	cout << endl;
 	cout << "					Welcome to our Bank! " << endl;
 	cout << endl;
+	cout << " 		!!!  MY HOMEWORK for WEEK 13 by 04/25/2018 is at : " << endl;
+	cout << "		*************************************************" << endl;
+	cout << endl;
+	cout << "  	!!!   https://github.com/NatashaLove/CIS2013_Week13_Homework1/blob/master/CIS2013_Week13_Homework1.cpp  !!!" << endl;
+	cout << "			  *************************************************" << endl;
+	cout << endl;
+	cout << " 			!!!   BELOW is the quiz/program I did on 04/17/2018 in class :" << endl;
+	cout << endl;
 	cout << " " << endl;
 	cout << "You can open a new bank account.  "<< endl;
 	cout << "Let's open Saving account first :" <<endl;
@@ -160,12 +173,12 @@ int main () {
 		}
 		// if sentences can be put as methods to Saving class - with the same name : withdraw - the Saving class will use its own withdraw method, but variables inherit from the main class.
 	if (new_s.balance < new_s.min_balance) {
-			cout << "Warning!!! Your balance is below minimum! " << endl;
+			cout << "Warning!!! Your balance is below minimum of  " << new_s.min_balance << " $! " <<endl;
 		}
 	if (new_s.withd > new_s.wth_lmt) {
 		new_s.balance+=new_s.withd;
 		new_s.withd = 0;
-		cout << "Warning!!! You can't withdraw more than " << new_s.min_balance << " ! " << endl;
+		cout << "Warning!!! You can't withdraw more than " << new_s.min_balance << " $! " << endl;
 		cout << "Balance on your account is " << new_s.balance << endl;
 	}	
 	
@@ -216,7 +229,7 @@ int main () {
 		// if sentences can be put as methods to Checking class - with the name : overdraft - the Checking class will use its own method, but variables inherit from the main class.
 
 		if (new_c.balance < 0) {
-			cout << "Warning!!! Your balance is below 0! " << endl;
+			cout << "Warning!!! Your balance is below 0 $! " << endl;
 			cout << " Your fee is " << new_c.overdraft_fee << endl;
 			cout << " Your balance now is "<< new_c.balance << endl;
 		}
